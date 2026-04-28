@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - வரவேற்கிறோம்</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="dashboard-body">
+  <div class="dash-card">
+
+    <div class="dash-avatar">
+      <svg fill="none" viewBox="0 0 24 24" stroke="#1a6fc4" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+      </svg>
+    </div>
+
+    <h2>வணக்கம், {{ name }}!</h2>
+    <p>நீங்கள் வெற்றிகரமாக login ஆனீர்கள் ✅</p>
+
+    <div class="info-grid">
+      <div class="info-row">
+        <span class="info-label">பெயர்</span>
+        <span class="info-value">{{ name }}</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">User ID</span>
+        <span class="info-value">{{ userid }}</span>
+      </div>
+    </div>
+
+    <a href="/logout">
+      <button class="btn btn-logout">Logout</button>
+    </a>
+  </div>
+</body>
+</html>
